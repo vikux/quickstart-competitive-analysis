@@ -25,3 +25,11 @@ build/
 
 # Logs
 *.log
+
+# Document files (exclude from repository)
+*.pdf
+*.pptx
+*.docx
+*.jpg
+*.png
+*.gif
