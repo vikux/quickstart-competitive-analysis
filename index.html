@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quickstart.is Competitive Analysis - Interactive Map</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>quickstart.is Competitive Analysis</h1>
+        <p class="subtitle">Visualizing our comprehensive multi-domain approach vs. competitors' single-domain focus</p>
+    </header>
+
+    <main>
+        <div class="controls">
+            <button id="reset-zoom" class="btn">Reset View</button>
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color quickstart"></div>
+                    <span>quickstart (Multi-Domain)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color competitor"></div>
+                    <span>Future Opportunities</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="help-legend-row">
+            <div class="help-section">
+                <div class="help-content">
+                    <p><strong><i class="fas fa-info-circle"></i> Interactive Domain Map:</strong></p>
+                    <ul class="help-list-horizontal">
+                        <li>Each bubble represents a product domain</li>
+                        <li>Solid colored bubbles are current services</li>
+                        <li>Dashed bubbles are future expansion areas</li>
+                        <li>Click any bubble to see competitor analysis</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="visualization-container">
+            <svg id="domain-map"></svg>
+        </div>
+
+        <div id="competitor-panel" class="panel">
+            <div class="panel-header">
+                <h3 id="panel-title">Select a domain to explore competitors</h3>
+                <button id="close-panel">&times;</button>
+            </div>
+            <div id="panel-content">
+                <p>Click on any domain bubble to see detailed competitor analysis and quickstart's advantages in that space.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

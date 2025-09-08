@@ -1,0 +1,23 @@
+{
+  "name": "quickstart-competitive-analysis",
+  "version": "1.0.0",
+  "description": "Interactive competitive analysis visualization for quickstart.is platform",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required - static site'",
+    "start": "vercel dev"
+  },
+  "keywords": [
+    "competitive-analysis",
+    "visualization",
+    "d3js",
+    "quickstart",
+    "fintech"
+  ],
+  "author": "quickstart.is",
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  }
+}
