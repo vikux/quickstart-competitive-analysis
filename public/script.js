@@ -27,8 +27,8 @@ const competitiveData = {
                 { name: 'KPMG Iceland', role: 'Professional services partner for compliance, legal framework, and corporate governance guidance' }
             ],
             competitors: [
-                { name: 'RSK (Government)', strength: 'Official channel', weakness: 'Up to 4 weeks processing, complex process' },
-                { name: 'Accounting Firms (JJ Fjármál)', strength: 'Professional service', weakness: '7 days, additional fees, separate banking' }
+                { name: 'RSK (Government)', url: 'https://www.rsk.is', strength: 'Official channel', weakness: 'Up to 4 weeks processing, complex process' },
+                { name: 'Accounting Firms (JJ Fjármál)', url: 'https://jj.is', strength: 'Professional service', weakness: '7 days, additional fees, separate banking' }
             ],
             marketPosition: 'dominant',
             size: 90
@@ -45,9 +45,9 @@ const competitiveData = {
                 { name: 'Arion Bank (Coming Soon)', role: 'Expanding banking partnerships for multi-bank card issuance' }
             ],
             competitors: [
-                { name: 'Kardío', strength: '95% receipt compliance, instant cards', weakness: 'Separate signup, expensive pricing model, not a recognized bank' },
-                { name: 'Síminn Pay', strength: 'Telecom backing, flexible controls', weakness: 'Additional step post-incorporation, credit card business model' },
-                { name: 'Traditional Banks (Landsbankinn, Íslandsbanki, Arion)', strength: 'Trusted institutions, established processes', weakness: 'Traditional approach, manual expense tracking, no AI features, card-by-card management instead of multi-card view' }
+                { name: 'Kardío', url: 'https://kardio.is', strength: '95% receipt compliance, instant cards', weakness: 'Separate signup, expensive pricing model, not a recognized bank' },
+                { name: 'Síminn Pay', url: 'https://siminn.is/einstaklingar/siminnpay', strength: 'Telecom backing, flexible controls', weakness: 'Additional step post-incorporation, credit card business model' },
+                { name: 'Traditional Banks (Landsbankinn, Íslandsbanki, Arion)', url: 'https://landsbankinn.is', strength: 'Trusted institutions, established processes', weakness: 'Traditional approach, manual expense tracking, no AI features, card-by-card management instead of multi-card view' }
             ],
             marketPosition: 'competitive',
             size: 85
@@ -64,10 +64,10 @@ const competitiveData = {
                 { name: 'Taktikal', role: 'E-signature technology and workflow automation infrastructure' }
             ],
             competitors: [
-                { name: 'Dokobit', strength: 'Icelandic eID support, trusted by major banks', weakness: 'Signing only, no templates' },
-                { name: 'Signet (Advania)', strength: 'QES compliance, local support', weakness: 'Limited lifecycle management' },
-                { name: 'PandaDoc', strength: 'Global contract management, templates', weakness: 'Not localized, expensive, no Icelandic eID' },
-                { name: 'Google Drive + manual processes', strength: 'Free storage, familiar interface', weakness: 'No e-signatures, no templates, manual tracking, no compliance' }
+                { name: 'Dokobit', url: 'https://www.dokobit.com', strength: 'Icelandic eID support, trusted by major banks', weakness: 'Signing only, no templates' },
+                { name: 'Signet (Advania)', url: 'https://www.advania.is', strength: 'QES compliance, local support', weakness: 'Limited lifecycle management' },
+                { name: 'PandaDoc', url: 'https://www.pandadoc.com', strength: 'Global contract management, templates', weakness: 'Not localized, expensive, no Icelandic eID' },
+                { name: 'Google Drive + manual processes', url: 'https://drive.google.com', strength: 'Free storage, familiar interface', weakness: 'No e-signatures, no templates, manual tracking, no compliance' }
             ],
             marketPosition: 'innovative',
             size: 80
@@ -86,7 +86,7 @@ const competitiveData = {
                 { name: 'Nova', role: 'Telecommunications infrastructure and business communication services' }
             ],
             competitors: [
-                { name: 'Síminn', strength: 'Market leader, extensive infrastructure', weakness: 'Traditional approach, separate billing, complex setup' }
+                { name: 'Síminn', url: 'https://siminn.is', strength: 'Market leader, extensive infrastructure', weakness: 'Traditional approach, separate billing, complex setup' }
             ],
             marketPosition: 'opportunity',
             size: 70
@@ -98,8 +98,8 @@ const competitiveData = {
             description: 'Computer and phone rentals for businesses with flexible terms',
             marketSize: '~5-9k employer firms preferring OPEX rental model (25-40% of employers, ~459 rental & leasing businesses exist)',
             competitors: [
-                { name: 'EU-based platforms (inki.tech)', strength: 'Pan-European reach, ships to Iceland', weakness: 'High shipping costs, complex logistics' },
-                { name: 'Buying workstations', strength: 'Ownership, no monthly costs after purchase', weakness: 'High upfront capital, maintenance responsibility, technology depreciation, no flexibility for scaling' }
+                { name: 'EU-based platforms (inki.tech)', url: 'https://inki.tech', strength: 'Pan-European reach, ships to Iceland', weakness: 'High shipping costs, complex logistics' },
+                { name: 'Buying workstations', url: null, strength: 'Ownership, no monthly costs after purchase', weakness: 'High upfront capital, maintenance responsibility, technology depreciation, no flexibility for scaling' }
             ],
             marketPosition: 'opportunity',
             size: 60
@@ -115,8 +115,8 @@ const competitiveData = {
                 { name: 'Lagahvoll', role: 'Legal consulting and specialized legal services for businesses' }
             ],
             competitors: [
-                { name: 'Local accounting firms', strength: 'Local knowledge, personal relationships', weakness: 'Fixed retainers, limited availability, no digital platform' },
-                { name: 'Freelance consultants', strength: 'Flexible, cost-effective', weakness: 'Inconsistent quality, no integrated platform' }
+                { name: 'Local accounting firms', url: null, strength: 'Local knowledge, personal relationships', weakness: 'Fixed retainers, limited availability, no digital platform' },
+                { name: 'Freelance consultants', url: null, strength: 'Flexible, cost-effective', weakness: 'Inconsistent quality, no integrated platform' }
             ],
             marketPosition: 'opportunity',
             size: 75
@@ -129,8 +129,8 @@ const competitiveData = {
             quickstartAdvantage: 'Native integration with Icelandic banks (Landsbankinn, Íslandsbanki, Arion), real-time asset tracking, local compliance',
             marketSize: '~19-22k employers needing dashboards; 30-50% penetration potential = ~6-11k organizations',
             competitors: [
-                { name: 'Global platforms (QuickBooks, Xero, NetSuite, Sage)', strength: 'Established solutions, comprehensive features', weakness: 'No Icelandic bank integration, expensive, complex setup for local businesses' },
-                { name: 'Manual processes (Excel, spreadsheets)', strength: 'Familiar tools, low cost', weakness: 'Time-consuming, error-prone, no real-time data, no automation' }
+                { name: 'Global platforms (QuickBooks, Xero, NetSuite, Sage)', url: 'https://quickbooks.intuit.com', strength: 'Established solutions, comprehensive features', weakness: 'No Icelandic bank integration, expensive, complex setup for local businesses' },
+                { name: 'Manual processes (Excel, spreadsheets)', url: 'https://office.com', strength: 'Familiar tools, low cost', weakness: 'Time-consuming, error-prone, no real-time data, no automation' }
             ],
             marketPosition: 'opportunity',
             size: 70
@@ -145,8 +145,8 @@ const competitiveData = {
                 { name: 'SKAGI', role: 'Foreign exchange services and international payment processing' }
             ],
             competitors: [
-                { name: 'Banks', strength: 'Trusted institutions', weakness: 'Limited hours, high fees, unfair exchange rates' },
-                { name: 'Wise (TransferWise)', strength: 'Low fees, transparent', weakness: 'Not Iceland-focused, cannot top-up in ISK instantly' }
+                { name: 'Banks', url: 'https://landsbankinn.is', strength: 'Trusted institutions', weakness: 'Limited hours, high fees, unfair exchange rates' },
+                { name: 'Wise (TransferWise)', url: 'https://wise.com', strength: 'Low fees, transparent', weakness: 'Not Iceland-focused, cannot top-up in ISK instantly' }
             ],
             marketPosition: 'opportunity',
             size: 68
@@ -158,9 +158,9 @@ const competitiveData = {
             description: 'Board management, compliance tools, and investment facilitation',
             marketSize: '~8-12k limited liability companies maintaining boards/governance (subset of employers beyond micro-size)',
             competitors: [
-                { name: 'BoardEffect', strength: 'Comprehensive governance features', weakness: 'Enterprise-focused, expensive, no fundraising' },
-                { name: 'Carta', strength: 'Cap table management, equity tools', weakness: 'US-focused, expensive, complex for SMEs' },
-                { name: 'Manual processes', strength: 'Familiar approach', weakness: 'Time-consuming, error-prone, fragmented' }
+                { name: 'BoardEffect', url: 'https://www.boardeffect.com', strength: 'Comprehensive governance features', weakness: 'Enterprise-focused, expensive, no fundraising' },
+                { name: 'Carta', url: 'https://carta.com', strength: 'Cap table management, equity tools', weakness: 'US-focused, expensive, complex for SMEs' },
+                { name: 'Manual processes', url: null, strength: 'Familiar approach', weakness: 'Time-consuming, error-prone, fragmented' }
             ],
             marketPosition: 'opportunity',
             size: 70
@@ -505,9 +505,12 @@ class CompetitiveMap {
         `;
         
         domain.competitors.forEach(competitor => {
+            const competitorTitle = competitor.url 
+                ? `<a href="${competitor.url}" target="_blank" rel="noopener noreferrer">${competitor.name}</a>`
+                : competitor.name;
             html += `
                 <div class="competitor-card">
-                    <h5><i class="fas fa-building"></i> ${competitor.name}</h5>
+                    <h5><i class="fas fa-building"></i> ${competitorTitle}</h5>
                     <p class="strength"><i class="fas fa-thumbs-up"></i> <strong>Strength:</strong> ${competitor.strength}</p>
                     <p class="weakness"><i class="fas fa-thumbs-down"></i> <strong>Weakness:</strong> ${competitor.weakness}</p>
                 </div>

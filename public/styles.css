@@ -621,6 +621,17 @@ main {
     color: #6C5CE7;
 }
 
+.competitor-card h5 a {
+    color: #2D3436;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.competitor-card h5 a:hover {
+    color: #6C5CE7;
+    text-decoration: underline;
+}
+
 .strength {
     color: #00B894;
     margin-bottom: 0.8rem;
