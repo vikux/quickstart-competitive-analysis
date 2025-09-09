@@ -22,7 +22,7 @@ const competitiveData = {
             icon: 'fas fa-building',
             description: 'Rapid business registration with integrated banking',
             quickstartAdvantage: '24-hour registration vs up to 4 weeks',
-            marketSize: '~1,200 new companies registered annually in Iceland',
+            marketSize: '~3,100 new ehf companies registered annually (2023: 3,074 new private limited companies, +1.4% YoY)',
             partners: [
                 { name: 'KPMG Iceland', role: 'Professional services partner for compliance, legal framework, and corporate governance guidance' }
             ],
@@ -39,7 +39,7 @@ const competitiveData = {
             icon: 'fas fa-credit-card',
             description: 'Smart corporate cards with AI-powered expense tracking',
             quickstartAdvantage: 'Integrated from day one with bank account, AI receipt matching, bank-agnostic platform',
-            marketSize: '~8,000 active companies in Iceland needing corporate cards',
+            marketSize: '~19-22k employers as practical SAM (2022: 18,906 employers); 40-60% adoption potential = ~8-13k active programs',
             partners: [
                 { name: 'Landsbankinn', role: 'Primary banking partner for card issuance and account integration' },
                 { name: 'Arion Bank (Coming Soon)', role: 'Expanding banking partnerships for multi-bank card issuance' }
@@ -58,7 +58,7 @@ const competitiveData = {
             icon: 'fas fa-file-contract',
             description: 'E-signatures, legal templates, and lifecycle management',
             quickstartAdvantage: 'Foundation documents included, local Icelandic templates, AI-powered contract analysis, banking integration for seamless workflow',
-            marketSize: '~15,000 businesses requiring contract management solutions',
+            marketSize: '~30-40k entities needing contract lifecycle management (employers ~19-22k + micro-firms signing agreements)',
             partners: [
                 { name: 'KPMG Iceland', role: 'Legal template validation and compliance review for Icelandic business law' },
                 { name: 'Taktikal', role: 'E-signature technology and workflow automation infrastructure' }
@@ -80,7 +80,7 @@ const competitiveData = {
             name: 'Telecommunications',
             icon: 'fas fa-phone',
             description: 'Centralized telco management, billing, and services integrated with company registration',
-            marketSize: '~12,000 businesses needing communication solutions',
+            marketSize: '~155-170k business mobile SIMs managed by ~19-22k employers (30% of ~520k mobile subscriptions)',
             quickstartAdvantage: 'Telco services included in company formation package, centralized billing with banking integration',
             partners: [
                 { name: 'Nova', role: 'Telecommunications infrastructure and business communication services' }
@@ -96,7 +96,7 @@ const competitiveData = {
             name: 'Computer & Phone Rental',
             icon: 'fas fa-laptop',
             description: 'Computer and phone rentals for businesses with flexible terms',
-            marketSize: '~3,000 companies requiring technology rental services',
+            marketSize: '~5-9k employer firms preferring OPEX rental model (25-40% of employers, ~459 rental & leasing businesses exist)',
             competitors: [
                 { name: 'EU-based platforms (inki.tech)', strength: 'Pan-European reach, ships to Iceland', weakness: 'High shipping costs, complex logistics' },
                 { name: 'Buying workstations', strength: 'Ownership, no monthly costs after purchase', weakness: 'High upfront capital, maintenance responsibility, technology depreciation, no flexibility for scaling' }
@@ -109,7 +109,7 @@ const competitiveData = {
             name: 'Accounting & Legal On-Demand',
             icon: 'fas fa-calculator',
             description: 'On-demand accounting and legal consulting services for startups and SMEs',
-            marketSize: '~10,000 SMEs needing professional services support',
+            marketSize: '~19-30k firms needing outsourced bookkeeping & ad-hoc legal (employers + VAT-liable micro-firms)',
             partners: [
                 { name: 'KPMG Iceland', role: 'On-demand accounting expertise and financial advisory services' },
                 { name: 'Lagahvoll', role: 'Legal consulting and specialized legal services for businesses' }
@@ -127,7 +127,7 @@ const competitiveData = {
             icon: 'fas fa-chart-pie',
             description: 'Comprehensive business overview showing all assets, accounts, and future payables in one central dashboard',
             quickstartAdvantage: 'Native integration with Icelandic banks (Landsbankinn, Íslandsbanki, Arion), real-time asset tracking, local compliance',
-            marketSize: '~18,000 businesses needing financial oversight and reporting',
+            marketSize: '~19-22k employers needing dashboards; 30-50% penetration potential = ~6-11k organizations',
             competitors: [
                 { name: 'Global platforms (QuickBooks, Xero, NetSuite, Sage)', strength: 'Established solutions, comprehensive features', weakness: 'No Icelandic bank integration, expensive, complex setup for local businesses' },
                 { name: 'Manual processes (Excel, spreadsheets)', strength: 'Familiar tools, low cost', weakness: 'Time-consuming, error-prone, no real-time data, no automation' }
@@ -140,7 +140,7 @@ const competitiveData = {
             name: 'Foreign Exchange 24/7',
             icon: 'fas fa-exchange-alt',
             description: 'Real-time currency exchange and international payments',
-            marketSize: '~5,000 companies conducting international business',
+            marketSize: '~12-16k potential FX users from trade-active firms (15-20% of 81k enterprises; ~5-8k regular users)',
             partners: [
                 { name: 'SKAGI', role: 'Foreign exchange services and international payment processing' }
             ],
@@ -156,7 +156,7 @@ const competitiveData = {
             name: 'Corporate Governance & Fundraising',
             icon: 'fas fa-users-cog',
             description: 'Board management, compliance tools, and investment facilitation',
-            marketSize: '~2,500 growing companies needing governance and funding support',
+            marketSize: '~8-12k limited liability companies maintaining boards/governance (subset of employers beyond micro-size)',
             competitors: [
                 { name: 'BoardEffect', strength: 'Comprehensive governance features', weakness: 'Enterprise-focused, expensive, no fundraising' },
                 { name: 'Carta', strength: 'Cap table management, equity tools', weakness: 'US-focused, expensive, complex for SMEs' },
