@@ -411,7 +411,7 @@ class CompetitiveMap {
     }
     
     drawVisualization() {
-        // Create connections from quickstart to current domains
+        // Create connections from quickstart to current domains (draw first so they're behind other elements)
         this.connections = this.container.selectAll('.connection')
             .data(this.domainNodes.filter(d => d.type === 'current'))
             .enter()
@@ -420,7 +420,11 @@ class CompetitiveMap {
             .attr('x1', this.quickstartNode.fx)
             .attr('y1', this.quickstartNode.fy)
             .attr('x2', d => d.x)
-            .attr('y2', d => d.y);
+            .attr('y2', d => d.y)
+            .style('stroke', '#6C5CE7')
+            .style('stroke-width', '3')
+            .style('opacity', '0.8')
+            .style('stroke-dasharray', '5,5');
         
         // Create domain groups
         this.domainGroups = this.container.selectAll('.domain-group')

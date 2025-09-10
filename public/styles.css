@@ -280,11 +280,12 @@ main {
 
 /* Connection lines */
 .connection {
-    stroke: url(#quickstart-gradient);
+    stroke: #6C5CE7;
     stroke-width: 3;
-    opacity: 0.7;
+    opacity: 0.8;
     stroke-dasharray: 5,5;
     filter: drop-shadow(0 0 3px rgba(108, 92, 231, 0.3));
+    pointer-events: none;
 }
 
 /* Tooltip styles */
