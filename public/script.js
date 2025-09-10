@@ -168,6 +168,79 @@ const competitiveData = {
     ]
 };
 
+// Feature comparison data
+const featureComparisons = {
+    'expense-management': {
+        title: 'Credit Cards & Expense Management',
+        competitors: ['QuickStart', 'Kardío', 'SíminnPay', 'Banks (Landsbankinn/Íslandsbanki)'],
+        features: [
+            {
+                name: 'Instant virtual card issuance',
+                values: ['✅', '✅', '✅', '❌ (takes days)']
+            },
+            {
+                name: 'Card issuance & management',
+                values: ['✅', '✅', '✅', '❌ (branch/bank only)'],
+                highlight: true
+            },
+            {
+                name: 'All cards overview',
+                values: ['✅', '✅', '✅', '❌ (only per-card view)'],
+                highlight: true
+            },
+            {
+                name: 'Physical card available',
+                values: ['✅', '❌ (virtual only)', '✅', '✅']
+            },
+            {
+                name: 'AI receipt matching',
+                values: ['✅', '❌', '❌', '❌ (manual photo upload)'],
+                highlight: true
+            },
+            {
+                name: 'Bulk receipt upload',
+                values: ['✅', '❌', '❌', '❌'],
+                highlight: true
+            },
+            {
+                name: 'Email receipt forwarding',
+                values: ['✅', '❌', '✅', '❌'],
+                highlight: true
+            },
+            {
+                name: 'Auto reminders for receipts',
+                values: ['✅', '✅', '✅', '❌']
+            },
+            {
+                name: 'Accounting system integration',
+                values: ['✅', '✅', '✅', 'Partial (manual export)']
+            },
+            {
+                name: 'Spend controls (limits, merchant locks)',
+                values: ['✅ (card limits only)', '✅', '✅', 'Limited']
+            },
+            {
+                name: 'Analytics dashboard',
+                values: ['✅', '✅', '✅', '❌ (basic transaction lists)']
+            },
+            {
+                name: 'Free corporate card',
+                values: ['✅', '❌', '❌', '❌ (annual fees)']
+            },
+            {
+                name: 'Mobile app (employee use)',
+                values: ['✅', '✅', '✅', '✅ (basic receipt/photo upload)'],
+                highlight: true
+            },
+            {
+                name: 'Transparent pricing',
+                values: ['✅', '✅ (fees)', '❌ (árgjald + fees)', '✅ (árgjald)'],
+                highlight: true
+            }
+        ]
+    }
+};
+
 class CompetitiveMap {
     constructor() {
         this.svg = d3.select('#domain-map');
@@ -518,8 +591,80 @@ class CompetitiveMap {
         });
         
         html += '</div>';
+        
+        // Add feature comparison button if available
+        if (featureComparisons[domain.id]) {
+            html += `
+                <div class="comparison-section">
+                    <button id="show-comparison" class="comparison-btn">
+                        <i class="fas fa-table"></i> View Feature Comparison
+                    </button>
+                </div>
+            `;
+        }
+        
         content.innerHTML = html;
+        
+        // Add event listener for comparison button
+        if (featureComparisons[domain.id]) {
+            document.getElementById('show-comparison').addEventListener('click', () => {
+                this.showFeatureComparison(domain.id);
+            });
+        }
+        
         panel.classList.add('active');
+    }
+    
+    showFeatureComparison(domainId) {
+        const comparison = featureComparisons[domainId];
+        if (!comparison) return;
+        
+        const modal = document.getElementById('feature-comparison-modal');
+        const title = document.getElementById('comparison-title');
+        const container = document.getElementById('comparison-table-container');
+        
+        title.textContent = comparison.title;
+        
+        // Build table HTML
+        let tableHtml = `
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th class="feature-column">Feature</th>
+        `;
+        
+        comparison.competitors.forEach((competitor, index) => {
+            const isQuickstart = competitor.toLowerCase().includes('quickstart');
+            tableHtml += `<th class="competitor-column ${isQuickstart ? 'quickstart-column' : ''}">${competitor}</th>`;
+        });
+        
+        tableHtml += `
+                    </tr>
+                </thead>
+                <tbody>
+        `;
+        
+        comparison.features.forEach(feature => {
+            const rowClass = feature.highlight ? 'highlighted-row' : '';
+            tableHtml += `<tr class="${rowClass}">`;
+            tableHtml += `<td class="feature-name">${feature.name}</td>`;
+            
+            feature.values.forEach((value, index) => {
+                const isQuickstart = comparison.competitors[index].toLowerCase().includes('quickstart');
+                const cellClass = isQuickstart ? 'quickstart-cell' : '';
+                tableHtml += `<td class="feature-value ${cellClass}">${value}</td>`;
+            });
+            
+            tableHtml += `</tr>`;
+        });
+        
+        tableHtml += `
+                </tbody>
+            </table>
+        `;
+        
+        container.innerHTML = tableHtml;
+        modal.classList.add('active');
     }
     
     showTooltip(event, domain) {
@@ -571,6 +716,17 @@ class CompetitiveMap {
         
         document.getElementById('close-panel').addEventListener('click', () => {
             document.getElementById('competitor-panel').classList.remove('active');
+        });
+        
+        document.getElementById('close-comparison').addEventListener('click', () => {
+            document.getElementById('feature-comparison-modal').classList.remove('active');
+        });
+        
+        // Close modal when clicking outside
+        document.getElementById('feature-comparison-modal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('feature-comparison-modal')) {
+                document.getElementById('feature-comparison-modal').classList.remove('active');
+            }
         });
     }
 }
