@@ -170,6 +170,44 @@ const competitiveData = {
 
 // Feature comparison data
 const featureComparisons = {
+    'company-formation': {
+        title: 'Company Creation',
+        competitors: ['QuickStart', 'RSK Online', 'Accountants / Law Firms'],
+        features: [
+            {
+                name: 'Registration speed',
+                values: ['✅ (24h)', '❌ (4–7 days)', '❌ (3–7 days, same as RSK)'],
+                highlight: true
+            },
+            {
+                name: 'Fully online process',
+                values: ['✅', '✅', '⚠️ (email / manual filings)']
+            },
+            {
+                name: 'Bank account included',
+                values: ['✅ (Landsbankinn)', '❌', '❌'],
+                highlight: true
+            },
+            {
+                name: 'Credit card issuance included',
+                values: ['✅ (with bank account)', '❌', '❌'],
+                highlight: true
+            },
+            {
+                name: 'Payable by credit card',
+                values: ['✅', '❌ (bank transfer only)', '⚠️ (depends on firm)']
+            },
+            {
+                name: 'Automation level',
+                values: ['✅ (end-to-end)', '❌', '❌'],
+                highlight: true
+            },
+            {
+                name: 'Transparent pricing',
+                values: ['✅', '✅ (official fees)', '⚠️ (service fees*)']
+            }
+        ]
+    },
     'expense-management': {
         title: 'Credit Cards & Expense Management',
         competitors: ['QuickStart', 'Kardío', 'SíminnPay', 'Banks (Landsbankinn/Íslandsbanki)'],
