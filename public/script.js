@@ -208,6 +208,47 @@ const featureComparisons = {
             }
         ]
     },
+    'contract-management': {
+        title: 'Contract Management & eSignature',
+        competitors: ['QuickStart', 'Dokobit', 'PandaDoc', 'Signet (Advania)', 'DocuSign / Intl.'],
+        features: [
+            {
+                name: 'Legally valid eSignature (QES)',
+                values: ['✅ (via eID)', '✅ (via eID)', '❌ (basic eSign only)', '✅ (via eID)', '⚠️ (AES, not QES)'],
+                highlight: true
+            },
+            {
+                name: 'Icelandic eID support (Auðkenni)',
+                values: ['✅', '✅', '❌', '✅', '❌'],
+                highlight: true
+            },
+            {
+                name: 'Pre-approved legal templates',
+                values: ['✅', '❌', '✅ (extensive, but generic)', '❌', '⚠️ (some templates, not local)'],
+                highlight: true
+            },
+            {
+                name: 'AI contracts (drafting, review)',
+                values: ['🟡 Planned', '❌', '⚠️ (basic AI drafting/review)', '❌', '⚠️ (basic in higher-tier CLM)']
+            },
+            {
+                name: 'Payment / invoicing integrations',
+                values: ['🟡 Planned', '❌', '✅ (native invoicing + payment collection)', '❌', '⚠️ (some integrations in CLM)']
+            },
+            {
+                name: 'Contract storage in cloud',
+                values: ['✅', '✅', '✅', '✅', '✅']
+            },
+            {
+                name: 'Expiration & renewal reminders',
+                values: ['✅', '❌', '✅', '❌', '⚠️ (in higher-tier CLM)']
+            },
+            {
+                name: 'Transparent pricing',
+                values: ['✅ (subscription / bundled)', '✅ (per document / subscription)', '✅ (subscription, transparent tiers)', '✅ (subscription)', '⚠️ (subscription, varies by tier)']
+            }
+        ]
+    },
     'expense-management': {
         title: 'Credit Cards & Expense Management',
         competitors: ['QuickStart', 'Kardío', 'SíminnPay', 'Banks (Landsbankinn/Íslandsbanki)'],
