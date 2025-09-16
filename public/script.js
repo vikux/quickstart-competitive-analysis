@@ -296,7 +296,15 @@ const featureComparisons = {
             },
             {
                 name: 'Spend controls (limits, merchant locks)',
-                values: ['✅ (card limits only)', '✅', '✅', 'Limited']
+                values: ['🟡 (card limits only)', '🟡 (limits only)', '✅ (merchant, time, limit)', 'Limited']
+            },
+            {
+                name: 'Online onboarding',
+                values: ['🟡 (backend process)', '🟡 (not public)', '✅', '❌ (branch visit required)']
+            },
+            {
+                name: 'Unlimited cards',
+                values: ['❌ (as long as used)', '✅', '✅', '❌ (limited by bank policy)']
             },
             {
                 name: 'Analytics dashboard',
